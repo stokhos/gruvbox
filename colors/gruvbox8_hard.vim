@@ -52,13 +52,13 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
       hi Normal guifg=#ebdbb2 guibg=NONE gui=NONE cterm=NONE
       hi CursorLineNr guifg=#fabd2f guibg=NONE gui=NONE cterm=NONE
       hi FoldColumn guifg=#928374 guibg=NONE gui=NONE cterm=NONE
-      hi SignColumn guifg=#ebdbb2 guibg=NONE gui=NONE cterm=NONE
+      hi SignColumn guifg=NONE guibg=NONE gui=NONE cterm=NONE
       hi VertSplit guifg=#665c54 guibg=NONE gui=NONE cterm=NONE
     else
       hi Normal guifg=#ebdbb2 guibg=#1d2021 gui=NONE cterm=NONE
       hi CursorLineNr guifg=#fabd2f guibg=#3c3836 gui=NONE cterm=NONE
       hi FoldColumn guifg=#928374 guibg=#3c3836 gui=NONE cterm=NONE
-      hi SignColumn guifg=#ebdbb2 guibg=#3c3836 gui=NONE cterm=NONE
+      hi SignColumn guifg=NONE guibg=NONE gui=NONE cterm=NONE
       hi VertSplit guifg=#665c54 guibg=#1d2021 gui=NONE cterm=NONE
     endif
     hi ColorColumn guifg=NONE guibg=#3c3836 gui=NONE cterm=NONE
@@ -182,12 +182,6 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
       finish
     endif
     if get(g:, "gruvbox_plugin_hi_groups", 0)
-      hi ALEError guifg=NONE guibg=NONE guisp=#fb4934 gui=undercurl ctermfg=NONE ctermbg=NONE cterm=underline
-      hi ALEWarning guifg=NONE guibg=NONE guisp=#fb4934 gui=undercurl ctermfg=NONE ctermbg=NONE cterm=underline
-      hi ALEInfo guifg=NONE guibg=NONE guisp=#83a598 gui=undercurl ctermfg=NONE ctermbg=NONE cterm=underline
-      hi ALEErrorSign guifg=#fb4934 guibg=#3c3836 gui=NONE cterm=NONE
-      hi ALEWarningSign guifg=#fabd2f guibg=#3c3836 gui=NONE cterm=NONE
-      hi ALEInfoSign guifg=#83a598 guibg=#3c3836 gui=NONE cterm=NONE
       hi BufTabLineCurrent guifg=#1d2021 guibg=#a89984 gui=NONE cterm=NONE
       hi BufTabLineActive guifg=#a89984 guibg=#504945 gui=NONE cterm=NONE
       hi BufTabLineHidden guifg=#7c6f64 guibg=#3c3836 gui=NONE cterm=NONE
@@ -202,36 +196,8 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
       hi CocHintFloat guifg=#d3869b guibg=NONE gui=NONE cterm=NONE
       hi CocSelectedText guifg=#3c3836 guibg=#1d2021 gui=NONE cterm=NONE
       hi CocCodeLens guifg=#504945 guibg=NONE gui=NONE cterm=NONE
-      hi CtrlPMatch guifg=#fabd2f guibg=NONE gui=NONE cterm=NONE
-      hi CtrlPNoEntries guifg=#fb4934 guibg=NONE gui=NONE cterm=NONE
-      hi CtrlPPrtBase guifg=#504945 guibg=NONE gui=NONE cterm=NONE
-      hi CtrlPPrtCursor guifg=#83a598 guibg=NONE gui=NONE cterm=NONE
-      hi CtrlPLinePre guifg=#504945 guibg=NONE gui=NONE cterm=NONE
-      hi CtrlPMode1 guifg=#83a598 guibg=#504945 gui=bold cterm=bold
-      hi CtrlPMode2 guifg=#1d2021 guibg=#83a598 gui=bold cterm=bold
-      hi CtrlPStats guifg=#a89984 guibg=#504945 gui=bold cterm=bold
-      if !get(g:, 'gruvbox_bold', 1)
-        hi CtrlPMode1 gui=NONE cterm=NONE
-        hi CtrlPMode2 gui=NONE cterm=NONE
-        hi CtrlPStats gui=NONE cterm=NONE
-      endif
       hi DirvishPathTail guifg=#8ec07c guibg=NONE gui=NONE cterm=NONE
       hi DirvishArg guifg=#fabd2f guibg=NONE gui=NONE cterm=NONE
-      hi! link EasyMotionTarget Search
-      hi! link EasyMotionShade Comment
-      hi gitcommitSelectedFile guifg=#b8bb26 guibg=NONE gui=NONE cterm=NONE
-      hi gitcommitDiscardedFile guifg=#fb4934 guibg=NONE gui=NONE cterm=NONE
-      if get(g:, 'gruvbox_transp_bg', 0)
-        hi GitGutterAdd guifg=#b8bb26 guibg=NONE gui=NONE cterm=NONE
-        hi GitGutterChange guifg=#8ec07c guibg=NONE gui=NONE cterm=NONE
-        hi GitGutterDelete guifg=#fb4934 guibg=NONE gui=NONE cterm=NONE
-        hi GitGutterChangeDelete guifg=#8ec07c guibg=NONE gui=NONE cterm=NONE
-      else
-        hi GitGutterAdd guifg=#b8bb26 guibg=#3c3836 gui=NONE cterm=NONE
-        hi GitGutterChange guifg=#8ec07c guibg=#3c3836 gui=NONE cterm=NONE
-        hi GitGutterDelete guifg=#fb4934 guibg=#3c3836 gui=NONE cterm=NONE
-        hi GitGutterChangeDelete guifg=#8ec07c guibg=#3c3836 gui=NONE cterm=NONE
-      endif
       if get(g:, 'indent_guides_auto_colors', 0)
         if get(g:, 'gruvbox_invert_indent_guides', 0)
           hi IndentGuidesOdd guifg=#1d2021 guibg=#504945 gui=reverse cterm=reverse
@@ -247,46 +213,6 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
       if !exists('g:indentLine_color_gui')
         let g:indentLine_color_gui = '#504945'
       endif
-      hi NERDTreeDir guifg=#8ec07c guibg=NONE gui=NONE cterm=NONE
-      hi NERDTreeDirSlash guifg=#8ec07c guibg=NONE gui=NONE cterm=NONE
-      hi NERDTreeOpenable guifg=#fe8019 guibg=NONE gui=NONE cterm=NONE
-      hi NERDTreeClosable guifg=#fe8019 guibg=NONE gui=NONE cterm=NONE
-      hi NERDTreeFile guifg=#ebdbb2 guibg=NONE gui=NONE cterm=NONE
-      hi NERDTreeExecFile guifg=#fabd2f guibg=NONE gui=NONE cterm=NONE
-      hi NERDTreeUp guifg=#928374 guibg=NONE gui=NONE cterm=NONE
-      hi NERDTreeCWD guifg=#b8bb26 guibg=NONE gui=NONE cterm=NONE
-      hi NERDTreeHelp guifg=#ebdbb2 guibg=NONE gui=NONE cterm=NONE
-      hi NERDTreeToggleOn guifg=#b8bb26 guibg=NONE gui=NONE cterm=NONE
-      hi NERDTreeToggleOff guifg=#fb4934 guibg=NONE gui=NONE cterm=NONE
-      hi netrwDir guifg=#8ec07c guibg=NONE gui=NONE cterm=NONE
-      hi netrwClassify guifg=#8ec07c guibg=NONE gui=NONE cterm=NONE
-      hi netrwLink guifg=#928374 guibg=NONE gui=NONE cterm=NONE
-      hi netrwSymLink guifg=#ebdbb2 guibg=NONE gui=NONE cterm=NONE
-      hi netrwExe guifg=#fabd2f guibg=NONE gui=NONE cterm=NONE
-      hi netrwComment guifg=#928374 guibg=NONE gui=NONE cterm=NONE
-      hi netrwList guifg=#83a598 guibg=NONE gui=NONE cterm=NONE
-      hi netrwHelpCmd guifg=#8ec07c guibg=NONE gui=NONE cterm=NONE
-      hi netrwCmdSep guifg=#bdae93 guibg=NONE gui=NONE cterm=NONE
-      hi netrwVersion guifg=#b8bb26 guibg=NONE gui=NONE cterm=NONE
-      " Rainbow Parentheses
-      if !exists('g:rbpt_colorpairs')
-        let g:rbpt_colorpairs = [['blue', '#458588'], ['magenta', '#b16286'],
-              \ ['red', '#cc241d'], ['166', '#d65d0e']]
-      endif
-
-      let g:rainbow_guifgs = [ '#d65d0e', '#cc241d', '#b16286', '#458588' ]
-      let g:rainbow_ctermfgs = [ '166', 'red', 'magenta', 'blue' ]
-
-      if !exists('g:rainbow_conf')
-        let g:rainbow_conf = {}
-      endif
-      if !has_key(g:rainbow_conf, 'guifgs')
-        let g:rainbow_conf['guifgs'] = g:rainbow_guifgs
-      endif
-      if !has_key(g:rainbow_conf, 'ctermfgs')
-        let g:rainbow_conf['ctermfgs'] = g:rainbow_ctermfgs
-      endif
-
       let g:niji_dark_colours = g:rbpt_colorpairs
       let g:niji_light_colours = g:rbpt_colorpairs
       hi ShowMarksHLl guifg=#83a598 guibg=#3c3836 gui=NONE cterm=NONE
