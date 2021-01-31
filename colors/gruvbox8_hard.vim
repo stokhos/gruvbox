@@ -50,16 +50,16 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
     endif
     if get(g:, 'gruvbox_transp_bg', 0) && !has('gui_running')
       hi Normal guifg=#ebdbb2 guibg=NONE gui=NONE cterm=NONE
-      hi CursorLineNr guifg=NONE guibg=NONE gui=NONE cterm=NONE
+      hi CursorLineNr guifg=#fabd2f guibg=NONE gui=NONE cterm=NONE
       hi FoldColumn guifg=#928374 guibg=NONE gui=NONE cterm=NONE
       hi SignColumn guifg=NONE guibg=NONE gui=NONE cterm=NONE
       hi VertSplit guifg=#665c54 guibg=NONE gui=NONE cterm=NONE
     else
-      hi Normal guifg=#ebdbb2 guibg=#1d2021 gui=NONE cterm=NONE
-      hi CursorLineNr guifg=NONE guibg=NONE gui=NONE cterm=NONE
-      hi FoldColumn guifg=#928374 guibg=#3c3836 gui=NONE cterm=NONE
+      hi Normal guifg=#ebdbb2 guibg=NONE gui=NONE cterm=NONE
+      hi CursorLineNr guifg=#fabd2f guibg=NONE gui=NONE cterm=NONE
+      hi FoldColumn guifg=#928374 guibg=NONE gui=NONE cterm=NONE
       hi SignColumn guifg=NONE guibg=NONE gui=NONE cterm=NONE
-      hi VertSplit guifg=#665c54 guibg=#1d2021 gui=NONE cterm=NONE
+      hi VertSplit guifg=#665c54 guibg=NONE gui=NONE cterm=NONE
     endif
     hi ColorColumn guifg=NONE guibg=#3c3836 gui=NONE cterm=NONE
     hi Comment guifg=#928374 guibg=NONE gui=italic cterm=italic
