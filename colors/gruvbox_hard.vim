@@ -50,13 +50,13 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
     endif
     if get(g:, 'gruvbox_transp_bg', 0) && !has('gui_running')
       hi Normal guifg=#ebdbb2 guibg=NONE gui=NONE cterm=NONE
-      hi CursorLineNr guifg=#928374 guibg=NONE gui=NONE cterm=NONE
+      hi CursorLineNr guifg=#7c6f64 guibg=NONE gui=NONE cterm=NONE
       hi FoldColumn guifg=#928374 guibg=NONE gui=NONE cterm=NONE
       hi SignColumn guifg=NONE guibg=NONE gui=NONE cterm=NONE
       hi VertSplit guifg=#665c54 guibg=NONE gui=NONE cterm=NONE
     else
       hi Normal guifg=#ebdbb2 guibg=NONE gui=NONE cterm=NONE
-      hi CursorLineNr guifg=#928374 guibg=NONE gui=NONE cterm=NONE
+      hi CursorLineNr guifg=#7c6f64 guibg=NONE gui=NONE cterm=NONE
       hi FoldColumn guifg=#928374 guibg=NONE gui=NONE cterm=NONE
       hi SignColumn guifg=NONE guibg=NONE gui=NONE cterm=NONE
       hi VertSplit guifg=#665c54 guibg=NONE gui=NONE cterm=NONE
