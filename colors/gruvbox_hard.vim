@@ -192,6 +192,15 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
       hi CocHintFloat guifg=#d3869b guibg=NONE gui=NONE cterm=NONE
       hi CocSelectedText guifg=#3c3836 guibg=#1d2021 gui=NONE cterm=NONE
       hi CocCodeLens guifg=#504945 guibg=NONE gui=NONE cterm=NONE
+      hi gitcommitSelectedFile guifg=#79740e guibg=NONE gui=NONE cterm=NONE
+      hi gitcommitDiscardedFile guifg=#9d0006 guibg=NONE gui=NONE cterm=NONE
+      let g:vimshell_escape_colors = [
+            \ '#a89984', '#9d0006', '#79740e', '#b57614',
+            \ '#076678', '#8f3f71', '#427b58', '#7c6f64',
+            \ '#f9f5d7', '#9d0006', '#79740e', '#af3a03',
+            \ '#076678', '#8f3f71', '#427b58', '#282828'
+            \ ]
+    endif
     if get(g:, "gruvbox_filetype_hi_groups", 0)
       hi diffAdded guifg=#b8bb26 guibg=NONE gui=NONE cterm=NONE
       hi diffRemoved guifg=#fb4934 guibg=NONE gui=NONE cterm=NONE
